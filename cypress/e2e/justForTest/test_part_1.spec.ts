@@ -36,7 +36,7 @@ describe('Register / login / logout users', () => {
         cy.request('GET','https://automationexercise.com/api/productsList').then(res=>{
             cy.log(JSON.parse(res.body));
             const body =JSON.parse(res.body);
-
+ 
             expect(body.responseCode).equal(200);
         })
     })
