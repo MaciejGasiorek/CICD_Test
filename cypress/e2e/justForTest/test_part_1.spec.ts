@@ -32,7 +32,7 @@ describe('Register / login / logout users', () => {
         checker.deleteAccountAndCheckIfDeleted();
     })
 
-    it.only('Api Check', ()=>{
+    it('Api Check', ()=>{
         cy.request('GET','https://automationexercise.com/api/productsList').then(res=>{
             cy.log(JSON.parse(res.body));
             const body =JSON.parse(res.body);
